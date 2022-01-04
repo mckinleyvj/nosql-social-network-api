@@ -11,9 +11,8 @@ app.use(routes);
 
 app.use(express.static('public'));
 
-db.once("open", () => {
+db.on("open", () => {
     app.listen(PORT, () => {
         console.log(`Connected on localhost:${PORT}`);
     });
 });
-
