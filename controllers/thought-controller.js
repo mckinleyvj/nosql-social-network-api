@@ -89,7 +89,7 @@ const thoughtsController = {
 
     // To add a new reaction
     addReaction({params, body}, res) {
-        Thought.findOneAndUpdate({_id: params.thoughtId}, {$addtoset: {reactions: body}}, {new: true, runValidators: true})
+        Thought.findOneAndUpdate({_id: params.thoughtId}, {$push: {reactions: body}}, {new: true, runValidators: true})
         .populate({path: 'reactions', select: '-__v'})
         .select('-__v')
         .then(dbThoughtData => {
@@ -100,7 +100,6 @@ const thoughtsController = {
         res.json(dbThoughtData);
         })
         .catch(err => res.status(400).json(err))
-
     },
 
     // To delete a reaction by ID
