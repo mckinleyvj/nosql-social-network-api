@@ -16,7 +16,7 @@ router.route('/').get(getAllThoughts);
 // -- Directs to: /api/thoughts/:id <GET, PUT, DELETE>
 router.route('/:id').get(getThoughtsById).put(updateThoughts).delete(deleteThoughts); 
 
-// -- Directs to: /api/thoughts/:userId <POST>
+// -- Directs to: /api/thoughts <POST>
 router.route('/:userId').post(createThoughts);
 
 // -- Directs to: /api/thoughts/:thoughtId/reactions <POST>
