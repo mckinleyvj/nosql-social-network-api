@@ -67,6 +67,7 @@ const usersController = {
     },
     // To add a friend
     addFriend({params}, res) {
+        console.log(params);
         User.findOneAndUpdate({_id: params.id}, {$push: { friends: params.friendId}}, {new: true})
         .populate({path: 'friends', select: ('-__v')})
         .select('-__v')
