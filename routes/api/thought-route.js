@@ -13,11 +13,14 @@ const {
 // -- Directs to: /api/thoughts <GET>
 router.route('/').get(getAllThoughts);
 
-// -- Directs to: /api/thoughts/:id <GET, PUT, DELETE>
-router.route('/:id').get(getThoughtsById).put(updateThoughts).delete(deleteThoughts); 
-
 // -- Directs to: /api/thoughts <POST>
 router.route('/:userId').post(createThoughts);
+
+// -- Directs to: /api/thoughts/:id <GET, PUT>
+router.route('/:id').get(getThoughtsById).put(updateThoughts)
+
+// -- Directs to: /api/thoughts/:userId/:thoughtId <DELETE>
+router.route('/:userId/:thoughtId').delete(deleteThoughts); 
 
 // -- Directs to: /api/thoughts/:thoughtId/reactions <POST>
 router.route('/:thoughtId/reactions').post(addReaction);
