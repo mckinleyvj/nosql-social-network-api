@@ -55,6 +55,14 @@ npm run start
 
 ## Demonstration
 
+![image](https://user-images.githubusercontent.com/87624839/148634754-91b761e0-c1d6-4edf-9ee7-19928938812a.png)
+
+![image](https://user-images.githubusercontent.com/87624839/148634770-75ad8bf3-6d36-4ab0-adf7-ce7b51b90e99.png)
+
+![image](https://user-images.githubusercontent.com/87624839/148634808-2914c627-6755-4dcb-9cb0-fadd4329f2d6.png)
+
+![image](https://user-images.githubusercontent.com/87624839/148634790-cc4a1ce1-08c4-48c6-99a8-32fcef3405f8.png)
+
 Please find the demonstration video here https://watch.screencastify.com/v/9o18DuLeqoWvaUUTP1i6
 
 [Back to top](#nosql-social-network-api)
